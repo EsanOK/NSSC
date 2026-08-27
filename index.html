@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="th">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>หน้าแรก</title>
+<style>
+  :root {
+    --bg: #e0e5ec;
+    --text: #6b7583;
+    --shadow-dark: #a3b1c6;
+    --shadow-light: #ffffff;
+  }
+
+  * {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+  }
+
+  html, body {
+    height: 100%;
+  }
+
+  body {
+    background: var(--bg);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-family: 'Segoe UI', 'Helvetica Neue', Arial, sans-serif;
+  }
+
+  .next-btn {
+    width: 90px;
+    height: 90px;
+    border-radius: 50%;
+    background: var(--bg);
+    border: none;
+    box-shadow: 9px 9px 16px var(--shadow-dark),
+                -9px -9px 16px var(--shadow-light);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    cursor: pointer;
+    transition: box-shadow 0.15s ease, transform 0.15s ease;
+  }
+
+  .next-btn:hover {
+    box-shadow: 11px 11px 20px var(--shadow-dark),
+                -11px -11px 20px var(--shadow-light);
+  }
+
+  .next-btn:active {
+    box-shadow: inset 6px 6px 12px var(--shadow-dark),
+                inset -6px -6px 12px var(--shadow-light);
+    transform: scale(0.97);
+  }
+
+  .next-btn svg {
+    width: 28px;
+    height: 28px;
+    stroke: var(--text);
+  }
+
+  .next-btn:focus-visible {
+    outline: 2px solid #8a97ab;
+    outline-offset: 4px;
+  }
+</style>
+</head>
+<body>
+
+  <button class="next-btn" onclick="location.href='menu/'" aria-label="ไปหน้าถัดไป">
+    <svg viewBox="0 0 24 24" fill="none" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round">
+      <path d="M9 6l6 6-6 6" />
+    </svg>
+  </button>
+
+</body>
+</html>
